@@ -1,0 +1,31 @@
+#overlay ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #D14700;
+  }
+  
+  mat-spinner, .labelSpinner {
+    z-index:999;  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    overflow: show;
+    position:absolute;
+  }
+  
+  .labelSpinner {
+    margin-top: 130px;
+    margin-left: 45px;
+    font-size: x-large;
+    font-weight: bold;
+    color: #D14700;
+  }
+  
+  #overlay {
+    position: fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    z-index:100000;
+    background-color: rgba(255,255,255,0.75);
+  }
