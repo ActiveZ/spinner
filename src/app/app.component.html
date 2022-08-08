@@ -1,6 +1,18 @@
 <spinner #spinner></spinner>
 
 <div style="text-align: center;">
-    <h1 style="color:lightgray">{{title}}</h1>
-    <button style="width:200px; height:100px;" (click)="onShowSpinner()" >show spinner</button>
+    <h1 style="color:lightgray">Spinner</h1>
+    <button style="width:200px; height:100px;" (click)="onShowSpinner()">show spinner</button>
+</div>
+
+
+<div style="text-align: center;">
+    <h1 style="color:lightgray">Modale</h1>
+    <form novalidate [formGroup]="myForm">
+        <button style="width:200px; height:100px;" (click)="onOpenModal()">ouvre modale</button>
+        <label for="raisonSociale">Dénomination sociale</label>
+        <input type="text" id="raisonSociale" formControlName="raisonSociale" />
+        <label for="ville">Ville</label>
+        <input type="text" id="ville" formControlName="ville" />
+    </form>
 </div>

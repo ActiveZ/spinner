@@ -1,0 +1,19 @@
+<h1>Confirmation de modification</h1>
+
+<form novalidate [formGroup]="myModalForm">
+
+    <div>
+        <label for="raisonSociale">Dénomination sociale</label>
+        <input type="text" id="raisonSociale" formControlName="raisonSociale" />
+    </div>
+
+    <div>
+        <label for="ville">Ville</label>
+        <input type="text" id="ville" formControlName="ville" />
+    </div>
+
+    <div id="divButtons">
+        <button (click)="cancel()">Annuler</button>
+        <button (click)="submit(myModalForm)" [disabled]="myModalForm.invalid">Valider</button>
+    </div>
+</form>
