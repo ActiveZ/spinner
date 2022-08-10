@@ -19,7 +19,10 @@ interface IEntreprise {
 export class AppComponent implements OnInit {
   @ViewChild('spinner') spinner: SpinnerComponent | undefined;
 
-  myForm!: FormGroup;
+  myForm = this.fb.group({
+    raisonSociale: [],
+    ville: []
+  });
 
   entreprise: IEntreprise = {
     raisonSociale: "raison sociale",
@@ -32,11 +35,7 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.myForm = this.fb.group({
-      raisonSociale: [],
-      ville: []
-    })
-    this.myForm.patchValue(this.entreprise)
+      this.myForm.patchValue(this.entreprise)
   }
 
   onShowSpinner() {
