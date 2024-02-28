@@ -17,7 +17,7 @@ interface IEntreprise {
 
 
 export class AppComponent implements OnInit {
-  @ViewChild('spinner') spinner: SpinnerComponent | undefined;
+  @ViewChild('spinner') spinner!: SpinnerComponent;
 
   myForm = this.fb.group({
     raisonSociale: [],
@@ -39,9 +39,9 @@ export class AppComponent implements OnInit {
   }
 
   onShowSpinner() {
-    this.spinner?.showSpinner()
+    this.spinner.show = true;
     setTimeout(() => {
-      this.spinner?.hideSpinner();
+      this.spinner.show = false;
     }, 3000);
   }
 
